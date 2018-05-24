@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{633FCCA6-DB4F-4D71-AF91-95BBA2DC47DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UnityProjectBrowser</RootNamespace>
+    <AssemblyName>UnityProjectBrowser</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YamlDotNet.4.3.1\lib\net45\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\NavigationHistory.cs" />
+    <Compile Include="Forms\RecentlyOpenedList.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="GotoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GotoForm.Designer.cs">
+      <DependentUpon>GotoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parsers\UnityMetaParser.cs" />
+    <Compile Include="Project\Exceptions\NotAUnityProjectException.cs" />
+    <Compile Include="Project\Exceptions\UnityProjectException.cs" />
+    <Compile Include="Project\Exceptions\UnityProjectNotTextException.cs" />
+    <Compile Include="Project\FileUpdater.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parsers\BaseParser.cs" />
+    <Compile Include="Parsers\Helpers\UnityTextReader.cs" />
+    <Compile Include="Parsers\UnityAssetParser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Project\IParserFeeder.cs" />
+    <Compile Include="Project\IParserPool.cs" />
+    <Compile Include="Project\ObjectDatabase.cs" />
+    <Compile Include="Project\ObjectDatabaseEventArgs.cs" />
+    <Compile Include="Project\ParserFeeder.cs" />
+    <Compile Include="Project\ParserPool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structure\ObjectRelationship.cs" />
+    <Compile Include="Structure\ProjectFile.cs" />
+    <Compile Include="Structure\ProjectObject.cs" />
+    <Compile Include="Structure\Unity\UnityAsset.cs" />
+    <Compile Include="Structure\Unity\UnityComponent.cs" />
+    <Compile Include="Structure\Unity\UnityDefaultAsset.cs" />
+    <Compile Include="Structure\Unity\UnityGameObject.cs" />
+    <Compile Include="Structure\UnityObject.cs" />
+    <Compile Include="Structure\UnityObjectKey.cs" />
+    <Compile Include="Structure\Unity\UnityPrefabInstance.cs" />
+    <Compile Include="Forms\IconImages.cs" />
+    <Compile Include="Structure\Unity\UnitySprite.cs" />
+    <Compile Include="Structure\Unity\UnityFolder.cs" />
+    <Compile Include="Utility\ListViewExtender.cs" />
+    <Compile Include="Utility\UnityClassIds.cs" />
+    <EmbeddedResource Include="GotoForm.resx">
+      <DependentUpon>GotoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\UnityIcons\PrefabModel Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\UnityIcons\PrefabNormal Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\UnityIcons\SceneAsset Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\UnityIcons\ScriptableObject Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AppIcons\FlatView.png" />
+    <Content Include="Assets\AppIcons\ico16.png" />
+    <Content Include="Assets\AppIcons\ico32.png" />
+    <Content Include="Assets\AppIcons\ico48.png" />
+    <Content Include="Assets\AppIcons\icon.ico" />
+    <Content Include="Assets\AppIcons\TreeView_713.png" />
+    <Content Include="Assets\UiIcons\arrow_back_16xLG.png" />
+    <Content Include="Assets\UiIcons\arrow_Forward_16xLG.png" />
+    <Content Include="Assets\UiIcons\case_sensitive.png" />
+    <Content Include="Assets\UiIcons\Close_16xLG.png" />
+    <Content Include="Assets\UiIcons\DialogGroup_5846_16x.png" />
+    <Content Include="Assets\UiIcons\Find_VS.png" />
+    <Content Include="Assets\UiIcons\FolderOpen_16x16_72.png" />
+    <Content Include="Assets\UiIcons\Open_6529.png" />
+    <Content Include="Assets\UnityIcons\Animation Icon.png" />
+    <Content Include="Assets\UnityIcons\AnimationClip Icon.png" />
+    <Content Include="Assets\UnityIcons\AnimatorController Icon.png" />
+    <Content Include="Assets\UnityIcons\AnimatorOverrideController Icon.png" />
+    <Content Include="Assets\UnityIcons\AnimatorStateMachine Icon.png" />
+    <Content Include="Assets\UnityIcons\AreaEffector2D Icon.png" />
+    <Content Include="Assets\UnityIcons\AudioClip Icon.png" />
+    <Content Include="Assets\UnityIcons\AudioListener Icon.png" />
+    <Content Include="Assets\UnityIcons\AudioSource Icon.png" />
+    <Content Include="Assets\UnityIcons\Avatar Icon.png" />
+    <Content Include="Assets\UnityIcons\AvatarMask Icon.png" />
+    <Content Include="Assets\UnityIcons\BoxCollider Icon.png" />
+    <Content Include="Assets\UnityIcons\BoxCollider2D Icon.png" />
+    <Content Include="Assets\UnityIcons\Camera Icon.png" />
+    <Content Include="Assets\UnityIcons\Canvas Icon.png" />
+    <Content Include="Assets\UnityIcons\CapsuleCollider Icon.png" />
+    <Content Include="Assets\UnityIcons\CapsuleCollider2D Icon.png" />
+    <Content Include="Assets\UnityIcons\CGProgram Icon.png" />
+    <Content Include="Assets\UnityIcons\CharacterController Icon.png" />
+    <Content Include="Assets\UnityIcons\CharacterJoint Icon.png" />
+    <Content Include="Assets\UnityIcons\CircleCollider2D Icon.png" />
+    <Content Include="Assets\UnityIcons\CompositeCollider2D Icon.png" />
+    <Content Include="Assets\UnityIcons\cs Script Icon.png" />
+    <Content Include="Assets\UnityIcons\Cubemap Icon.png" />
+    <Content Include="Assets\UnityIcons\DefaultAsset Icon.png" />
+    <Content Include="Assets\UnityIcons\DefaultSlate Icon.png" />
+    <Content Include="Assets\UnityIcons\DistanceJoint2D Icon.png" />
+    <Content Include="Assets\UnityIcons\EdgeCollider2D Icon.png" />
+    <Content Include="Assets\UnityIcons\EditorSettings Icon.png" />
+    <Content Include="Assets\UnityIcons\Fixedjoint Icon.png" />
+    <Content Include="Assets\UnityIcons\FixedJoint2D Icon.png" />
+    <Content Include="Assets\UnityIcons\Flare Icon.png" />
+    <Content Include="Assets\UnityIcons\FlareLayer Icon.png" />
+    <Content Include="Assets\UnityIcons\Folder Icon.png" />
+    <Content Include="Assets\UnityIcons\FolderEmpty Icon.png" />
+    <Content Include="Assets\UnityIcons\Font Icon.png" />
+    <Content Include="Assets\UnityIcons\GameManager Icon.png" />
+    <Content Include="Assets\UnityIcons\GameObject Icon.png" />
+    <Content Include="Assets\UnityIcons\HingeJoint2D Icon.png" />
+    <Content Include="Assets\UnityIcons\Js Script Icon.png" />
+    <Content Include="Assets\UnityIcons\Material Icon.png" />
+    <Content Include="Assets\UnityIcons\Mesh Icon.png" />
+    <Content Include="Assets\UnityIcons\MeshCollider Icon.png" />
+    <Content Include="Assets\UnityIcons\MeshFilter Icon.png" />
+    <Content Include="Assets\UnityIcons\MeshRenderer Icon.png" />
+    <Content Include="Assets\UnityIcons\MetaFile Icon.png" />
+    <Content Include="Assets\UnityIcons\Motion Icon.png" />
+    <Content Include="Assets\UnityIcons\MovieTexture Icon.png" />
+    <Content Include="Assets\UnityIcons\NavMeshObstacle Icon.png" />
+    <Content Include="Assets\UnityIcons\ParticleSystem Icon.png" />
+    <Content Include="Assets\UnityIcons\PhysicMaterial Icon.png" />
+    <Content Include="Assets\UnityIcons\PlatformEffector2D Icon.png" />
+    <Content Include="Assets\UnityIcons\PointEffector2D Icon.png" />
+    <Content Include="Assets\UnityIcons\PolygonCollider2D Icon.png" />
+    <Content Include="Assets\UnityIcons\Prefab Icon.png" />
+    <Content Include="Assets\UnityIcons\RectTransform Icon.png" />
+    <Content Include="Assets\UnityIcons\RenderTexture Icon.png" />
+    <Content Include="Assets\UnityIcons\RigidBody Icon.png" />
+    <Content Include="Assets\UnityIcons\RigidBody2D Icon.png" />
+    <Content Include="Assets\UnityIcons\Shader Icon.png" />
+    <Content Include="Assets\UnityIcons\SkinnedMeshRenderer Icon.png" />
+    <Content Include="Assets\UnityIcons\SliderJoint2D Icon.png" />
+    <Content Include="Assets\UnityIcons\SphereCollider Icon.png" />
+    <Content Include="Assets\UnityIcons\SpringJoint Icon.png" />
+    <Content Include="Assets\UnityIcons\SpringJoint2D Icon.png" />
+    <Content Include="Assets\UnityIcons\Sprite Icon.png" />
+    <Content Include="Assets\UnityIcons\SpriteCollider Icon.png" />
+    <Content Include="Assets\UnityIcons\SpriteRenderer Icon.png" />
+    <Content Include="Assets\UnityIcons\SubstanceArchive Icon.png" />
+    <Content Include="Assets\UnityIcons\SurfaceEffector2D Icon.png" />
+    <Content Include="Assets\UnityIcons\Terrain Icon.png" />
+    <Content Include="Assets\UnityIcons\TerrainCollider Icon.png" />
+    <Content Include="Assets\UnityIcons\TerrainData Icon.png" />
+    <Content Include="Assets\UnityIcons\TextMesh Icon.png" />
+    <Content Include="Assets\UnityIcons\Texture Icon.png" />
+    <Content Include="Assets\UnityIcons\Texture2D Icon.png" />
+    <Content Include="Assets\UnityIcons\TrailRenderer Icon.png" />
+    <Content Include="Assets\UnityIcons\Transform Icon.png" />
+    <Content Include="Assets\UnityIcons\WheelCollider Icon.png" />
+    <Content Include="Assets\UnityIcons\WheelJoint2D Icon.png" />
+    <Content Include="Assets\UnityIcons\WindZone Icon.png" />
+    <Content Include="Assets\UnityIcons\WorldParticleCollider Icon.png" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

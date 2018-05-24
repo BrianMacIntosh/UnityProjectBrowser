@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AnimationClip_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\animationclip icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Animation_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\animation icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AnimatorController_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\animatorcontroller icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AnimatorOverrideController_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\animatoroverridecontroller icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AnimatorStateMachine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\animatorstatemachine icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AreaEffector2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\areaeffector2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_back_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\arrow_back_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_Forward_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\arrow_forward_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AudioClip_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\audioclip icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AudioListener_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\audiolistener icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AudioSource_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\audiosource icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AvatarMask_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\avatarmask icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Avatar_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\avatar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BoxCollider2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\boxcollider2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BoxCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\boxcollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Camera_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\camera icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Canvas_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\canvas icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CapsuleCollider2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\capsulecollider2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CapsuleCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\capsulecollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CGProgram_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\cgprogram icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CharacterController_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\charactercontroller icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CharacterJoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\characterjoint icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CircleCollider2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\circlecollider2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CompositeCollider2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\compositecollider2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cs_Script_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\cs script icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cubemap_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\cubemap icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultAsset_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\defaultasset icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultSlate_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\defaultslate icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DistanceJoint2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\distancejoint2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EdgeCollider2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\edgecollider2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditorSettings_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\editorsettings icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Font_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\font icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameManager_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\gamemanager icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameObject_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\gameobject icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HingeJoint2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\hingejoint2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Js_Script_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\js script icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Material_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\material icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MeshCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\meshcollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MeshFilter_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\meshfilter icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MeshRenderer_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\meshrenderer icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mesh_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\mesh icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MetaFile_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\metafile icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Motion_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\motion icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MovieTexture_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\movietexture icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavMeshObstacle_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\navmeshobstacle icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ParticleSystem_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\particlesystem icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PhysicMaterial_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\physicmaterial icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlatformEffector2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\platformeffector2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PointEffector2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\pointeffector2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PolygonCollider2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\polygoncollider2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PrefabModel_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\prefabmodel icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PrefabNormal_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\prefabnormal icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prefab_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\prefab icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RectTransform_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\recttransform icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RenderTexture_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\rendertexture icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RigidBody2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\rigidbody2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RigidBody_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\rigidbody icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SceneAsset_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\sceneasset icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScriptableObject_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\scriptableobject icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shader_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\shader icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SkinnedMeshRenderer_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\skinnedmeshrenderer icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SliderJoint2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\sliderjoint2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SphereCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\spherecollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpringJoint2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\springjoint2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpringJoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\springjoint icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpriteCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\spritecollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpriteRenderer_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\spriterenderer icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sprite_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\sprite icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SubstanceArchive_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\substancearchive icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SurfaceEffector2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\surfaceeffector2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TerrainCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\terraincollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TerrainData_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\terraindata icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Terrain_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\terrain icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TextMesh_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\textmesh icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Texture2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\texture2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Texture_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\texture icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrailRenderer_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\trailrenderer icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Transform_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\transform icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WheelCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\wheelcollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WheelJoint2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\wheeljoint2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WindZone_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\windzone icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WorldParticleCollider_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\worldparticlecollider icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FixedJoint2D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\fixedjoint2d icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fixedjoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\fixedjoint icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlareLayer_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\flarelayer icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Flare_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\flare icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FolderEmpty_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\folderempty icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Folder_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\unityicons\folder icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="case_sensitive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\case_sensitive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\close_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlatView" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\appicons\flatview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FolderOpen_16x16_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\folderopen_16x16_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Open_6529" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\open_6529.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TreeView_713" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\appicons\treeview_713.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DialogGroup_5846_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\dialoggroup_5846_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Find_VS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\find_vs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
