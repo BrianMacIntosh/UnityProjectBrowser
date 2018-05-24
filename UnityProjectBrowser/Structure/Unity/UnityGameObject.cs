@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+using System.Linq;
 using YamlDotNet.RepresentationModel;
 
 namespace ProjectBrowser

@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+using System.IO;
 
 namespace ProjectBrowser
 {

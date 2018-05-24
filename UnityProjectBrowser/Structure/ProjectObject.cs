@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace ProjectBrowser

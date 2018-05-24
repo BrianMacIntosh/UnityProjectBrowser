@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+using System;
 
 namespace ProjectBrowser
 {

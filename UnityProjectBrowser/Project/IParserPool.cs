@@ -1,4 +1,7 @@
-﻿namespace ProjectBrowser
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+namespace ProjectBrowser
 {
 	public interface IParserPool
 	{

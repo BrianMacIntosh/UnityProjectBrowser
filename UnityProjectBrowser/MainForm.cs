@@ -1,4 +1,7 @@
-﻿using ProjectBrowser;
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+using ProjectBrowser;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

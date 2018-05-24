@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+using System.Windows.Forms;
 
 namespace ProjectBrowser
 {

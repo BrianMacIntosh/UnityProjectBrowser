@@ -1,4 +1,7 @@
-﻿namespace ProjectBrowser
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+namespace ProjectBrowser
 {
 	/// <summary>
 	/// Represents the contents of a single-asset file (such as a font or a texture).

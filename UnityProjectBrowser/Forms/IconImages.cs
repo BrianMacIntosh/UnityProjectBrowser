@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// Copyright(c) 2018 Brian MacIntosh
+// MIT License
+
+using System.Collections;
 using System.Globalization;
 using System.Resources;
 using System.Windows.Forms;
