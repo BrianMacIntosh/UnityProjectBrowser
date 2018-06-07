@@ -96,6 +96,7 @@
     <Compile Include="Structure\Unity\UnitySprite.cs" />
     <Compile Include="Structure\Unity\UnityFolder.cs" />
     <Compile Include="Utility\ListViewExtender.cs" />
+    <Compile Include="Utility\TimeSpanUtility.cs" />
     <Compile Include="Utility\UnityClassIds.cs" />
     <EmbeddedResource Include="GotoForm.resx">
       <DependentUpon>GotoForm.cs</DependentUpon>

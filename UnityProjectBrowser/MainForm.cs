@@ -83,7 +83,7 @@ namespace UnityProjectBrowser
 					UpdateAllObjectsList();
 				}
 				m_updateThreadSync.WaitOne();
-				Thread.Sleep(UpdateInterval - stopwatch.Elapsed);
+				Thread.Sleep(TimeSpanUtility.Max(TimeSpan.Zero, UpdateInterval - stopwatch.Elapsed));
 			}
 		}
 
