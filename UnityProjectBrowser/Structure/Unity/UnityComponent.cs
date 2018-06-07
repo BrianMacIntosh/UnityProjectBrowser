@@ -118,7 +118,8 @@ namespace ProjectBrowser
 
 		public override string ToString()
 		{
-			if (ObjectDatabase.TryGetObject(m_scriptKey, out ProjectObject scriptObject))
+			ProjectObject scriptObject;
+			if (ObjectDatabase.TryGetObject(m_scriptKey, out scriptObject))
 			{
 				return scriptObject.ToString();
 			}

@@ -116,12 +116,17 @@ namespace ProjectBrowser
 		/// </summary>
 		public static void AddPlaceholderObject(string uniqueId, ProjectObject obj)
 		{
+			if (obj == null)
+			{
+				throw new ArgumentNullException("obj");
+			}
+
 			s_objectsLock.EnterWriteLock();
 			try
 			{
 				if (!s_objects.ContainsKey(uniqueId))
 				{
-					s_objects.Add(uniqueId, obj ?? throw new ArgumentNullException("obj"));
+					s_objects.Add(uniqueId, obj);
 				}
 			}
 			finally
@@ -138,10 +143,15 @@ namespace ProjectBrowser
 		{
 			Thread.Sleep(0);
 
+			if (obj == null)
+			{
+				throw new ArgumentNullException("obj");
+			}
+
 			s_objectsLock.EnterWriteLock();
 			try
 			{
-				s_objects[uniqueId] = obj ?? throw new ArgumentNullException("obj");
+				s_objects[uniqueId] = obj;
 			}
 			finally
 			{
@@ -189,7 +199,8 @@ namespace ProjectBrowser
 			s_relationshipsLock.EnterWriteLock();
 			try
 			{
-				if (!s_relationships.TryGetValue(ownerUniqueId, out List<ObjectRelationship> relationships))
+				List<ObjectRelationship> relationships;
+				if (!s_relationships.TryGetValue(ownerUniqueId, out relationships))
 				{
 					relationships = new List<ObjectRelationship>();
 					s_relationships.Add(ownerUniqueId, relationships);
@@ -210,7 +221,8 @@ namespace ProjectBrowser
 			s_inverseRelationshipsLock.EnterWriteLock();
 			try
 			{
-				if (!s_inverseRelationships.TryGetValue(ownerUniqueId, out List<ObjectRelationship> relationships))
+				List<ObjectRelationship> relationships;
+				if (!s_inverseRelationships.TryGetValue(ownerUniqueId, out relationships))
 				{
 					relationships = new List<ObjectRelationship>();
 					s_inverseRelationships.Add(ownerUniqueId, relationships);
@@ -276,7 +288,8 @@ namespace ProjectBrowser
 			s_folderMappingsLock.EnterReadLock();
 			try
 			{
-				if (s_folderMappings.TryGetValue(absolutePath, out string uniqueId))
+				string uniqueId;
+				if (s_folderMappings.TryGetValue(absolutePath, out uniqueId))
 				{
 					return uniqueId;
 				}

@@ -22,8 +22,16 @@ namespace ProjectBrowser
 
 		public ObjectRelationship(string targetObjectId, string relationshipType)
 		{
-			TargetObjectId = targetObjectId ?? throw new ArgumentNullException("targetObjectId");
-			RelationshipType = relationshipType ?? throw new ArgumentNullException("relationshipType");
+			if (targetObjectId == null)
+			{
+				throw new ArgumentNullException("targetObjectId");
+			}
+			if (relationshipType == null)
+			{
+				throw new ArgumentNullException("relationshipType");
+			}
+			TargetObjectId = targetObjectId;
+			RelationshipType = relationshipType;
 		}
 
 		public override bool Equals(object obj)

@@ -31,7 +31,8 @@ namespace ProjectBrowser
 				{
 					if (key.EndsWith("Importer", StringComparison.OrdinalIgnoreCase))
 					{
-						if (UnityClassIds.TryGetClassIdByImporterName(key, out int classId))
+						int classId;
+						if (UnityClassIds.TryGetClassIdByImporterName(key, out classId))
 						{
 							defaultFileId = classId * 100000;
 							break;
@@ -69,7 +70,8 @@ namespace ProjectBrowser
 				if (rootNode.Children.TryGetValue("TextureImporter", out textureImporterNode))
 				{
 					YamlMappingNode textureImporterMappingNode = (YamlMappingNode)textureImporterNode;
-					if (textureImporterMappingNode.Children.TryGetValue("fileIDToRecycleName", out YamlNode fileIDToRecycleNameNode))
+					YamlNode fileIDToRecycleNameNode;
+					if (textureImporterMappingNode.Children.TryGetValue("fileIDToRecycleName", out fileIDToRecycleNameNode))
 					{
 						YamlMappingNode fileIDToRecycleNameMappingNode = (YamlMappingNode)fileIDToRecycleNameNode;
 						foreach (var kv in fileIDToRecycleNameMappingNode.Children)
@@ -82,7 +84,8 @@ namespace ProjectBrowser
 						}
 					}
 
-					if (textureImporterMappingNode.Children.TryGetValue("spriteMode", out YamlNode spriteModeNode))
+					YamlNode spriteModeNode;
+					if (textureImporterMappingNode.Children.TryGetValue("spriteMode", out spriteModeNode))
 					{
 						YamlScalarNode spriteModeScalarNode = (YamlScalarNode)spriteModeNode;
 						if (spriteModeScalarNode.Value == "1")

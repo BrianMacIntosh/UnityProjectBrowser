@@ -48,7 +48,8 @@ namespace ProjectBrowser
 		/// </summary>
 		public override string GetFilePath()
 		{
-			if (ObjectDatabase.TryGetObject(DocumentId, out ProjectObject document))
+			ProjectObject document;
+			if (ObjectDatabase.TryGetObject(DocumentId, out document))
 			{
 				return document.GetFilePath();
 			}

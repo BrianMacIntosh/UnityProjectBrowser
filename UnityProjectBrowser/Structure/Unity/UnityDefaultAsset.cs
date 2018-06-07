@@ -24,7 +24,8 @@ namespace ProjectBrowser
 
 		public override string ToString()
 		{
-			if (ObjectDatabase.TryGetObject(DocumentId, out ProjectObject documentAsset))
+			ProjectObject documentAsset;
+			if (ObjectDatabase.TryGetObject(DocumentId, out documentAsset))
 			{
 				return documentAsset.ToString();
 			}

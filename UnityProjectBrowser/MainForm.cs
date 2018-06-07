@@ -144,7 +144,8 @@ namespace UnityProjectBrowser
 		/// </summary>
 		private TreeNode GetTreeNode(string uniqueId, bool createPlaceholder)
 		{
-			if (m_treeNodes.TryGetValue(uniqueId, out TreeNode existingNode))
+			TreeNode existingNode;
+			if (m_treeNodes.TryGetValue(uniqueId, out existingNode))
 			{
 				return existingNode;
 			}
@@ -263,7 +264,8 @@ namespace UnityProjectBrowser
 			}
 
 			// see if there is an existing node of any kind for this object
-			m_treeNodes.TryGetValue(uniqueId, out TreeNode node);
+			TreeNode node;
+			m_treeNodes.TryGetValue(uniqueId, out node);
 
 			if (existingFolderNode != null) // there is a Windows folder node
 			{
@@ -333,7 +335,8 @@ namespace UnityProjectBrowser
 		/// </summary>
 		private void RemoveObject(ProjectObject obj)
 		{
-			if (m_treeNodes.TryGetValue(obj.UniqueId, out TreeNode existingNode))
+			TreeNode existingNode;
+			if (m_treeNodes.TryGetValue(obj.UniqueId, out existingNode))
 			{
 				existingNode.Remove();
 				m_treeNodes.Remove(obj.UniqueId);
@@ -360,7 +363,8 @@ namespace UnityProjectBrowser
 			selectedItem.BackColor = SystemColors.ActiveBorder;
 			selectedItem.ForeColor = SystemColors.HighlightText;
 
-			if (ObjectDatabase.TryGetObject(selectedItem.Name, out ProjectObject selectedObject))
+			ProjectObject selectedObject;
+			if (ObjectDatabase.TryGetObject(selectedItem.Name, out selectedObject))
 			{
 				// load the object into the inspect panel
 				UnityObjectKey unityObjectKey;
@@ -388,7 +392,8 @@ namespace UnityProjectBrowser
 		{
 			TreeNode selectedItem = allObjectsTreeView.SelectedNode;
 
-			if (!ObjectDatabase.TryGetObject(selectedItem.Name, out ProjectObject selectedObject))
+			ProjectObject selectedObject;
+			if (!ObjectDatabase.TryGetObject(selectedItem.Name, out selectedObject))
 			{
 				relationshipsListView.Items.Clear();
 				return;
@@ -450,7 +455,8 @@ namespace UnityProjectBrowser
 		/// </summary>
 		public void SetAllObjectsSelection(string uniqueId)
 		{
-			if (m_treeNodes.TryGetValue(uniqueId, out TreeNode selectedItemTreeNode))
+			TreeNode selectedItemTreeNode;
+			if (m_treeNodes.TryGetValue(uniqueId, out selectedItemTreeNode))
 			{
 				allObjectsTreeView.SelectedNode = selectedItemTreeNode;
 			}
@@ -540,8 +546,9 @@ namespace UnityProjectBrowser
 		/// </summary>
 		private void openInExplorerToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			ProjectObject projectObject;
 			if (allObjectsTreeView.SelectedNode != null
-				&& ObjectDatabase.TryGetObject(allObjectsTreeView.SelectedNode.Name, out ProjectObject projectObject))
+				&& ObjectDatabase.TryGetObject(allObjectsTreeView.SelectedNode.Name, out projectObject))
 			{
 				string objectPath = projectObject.GetFilePath();
 				if (!string.IsNullOrEmpty(objectPath))
@@ -556,8 +563,9 @@ namespace UnityProjectBrowser
 		/// </summary>
 		private void editToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			ProjectObject projectObject;
 			if (allObjectsTreeView.SelectedNode != null
-				&& ObjectDatabase.TryGetObject(allObjectsTreeView.SelectedNode.Name, out ProjectObject projectObject))
+				&& ObjectDatabase.TryGetObject(allObjectsTreeView.SelectedNode.Name, out projectObject))
 			{
 				string objectPath = projectObject.GetFilePath();
 				if (!string.IsNullOrEmpty(objectPath))
@@ -626,7 +634,8 @@ namespace UnityProjectBrowser
 		{
 			foreach (TreeNode node in m_treeNodes.Values)
 			{
-				if (ObjectDatabase.TryGetObject(node.Name, out ProjectObject nodeObject))
+				ProjectObject nodeObject;
+				if (ObjectDatabase.TryGetObject(node.Name, out nodeObject))
 				{
 					AddObject(nodeObject);
 				}
