@@ -68,20 +68,22 @@ namespace ProjectBrowser
 							}
 							break;
 						}
-				}
-			}
 
-			// search the entire tree for references
-			foreach (YamlNode node in objectNode.AllNodes)
-			{
-				YamlMappingNode mappingNode = node as YamlMappingNode;
-				if (mappingNode != null)
-				{
-					UnityObjectKey reference = ParseReference(mappingNode, key);
-					if (!reference.IsEmpty)
-					{
-						AddRelationship(reference, "has-reference-to", "is-referenced-by");
-					}
+					default:
+						// search the entire tree for references
+						foreach (YamlNode node in kv.Value.AllNodes)
+						{
+							YamlMappingNode mappingNode = node as YamlMappingNode;
+							if (mappingNode != null)
+							{
+								UnityObjectKey reference = ParseReference(mappingNode, key);
+								if (!reference.IsEmpty)
+								{
+									AddRelationship(reference, "has-reference-to", "is-referenced-by");
+								}
+							}
+						}
+						break;
 				}
 			}
 		}
