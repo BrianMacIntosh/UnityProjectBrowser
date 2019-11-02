@@ -82,6 +82,7 @@
     <Compile Include="Project\ParserFeeder.cs" />
     <Compile Include="Project\ParserPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structure\NullObject.cs" />
     <Compile Include="Structure\ObjectRelationship.cs" />
     <Compile Include="Structure\ProjectFile.cs" />
     <Compile Include="Structure\ProjectObject.cs" />

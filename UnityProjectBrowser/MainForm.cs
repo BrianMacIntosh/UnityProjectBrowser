@@ -239,6 +239,11 @@ namespace UnityProjectBrowser
 		/// </summary>
 		private void AddObject(ProjectObject obj)
 		{
+			if (obj.HideFromHierarchy)
+			{
+				return;
+			}
+
 			string parentKey = GetParentKey(obj);
 
 			TreeNodeCollection addTo;
@@ -677,6 +682,16 @@ namespace UnityProjectBrowser
 			if (result == DialogResult.OK || result == DialogResult.Yes)
 			{
 				//TODO:
+			}
+		}
+
+		private void reparseToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ProjectObject projectObject;
+			if (allObjectsTreeView.SelectedNode != null
+				&& ObjectDatabase.TryGetObject(allObjectsTreeView.SelectedNode.Name, out projectObject))
+			{
+				//TODO: discard existing relationships, re-trigger the correct feeder
 			}
 		}
 	}

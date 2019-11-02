@@ -5,13 +5,19 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using YamlDotNet.RepresentationModel;
 
 namespace ProjectBrowser
 {
 	public class UnityAssetParser : BaseParser
 	{
+		static UnityAssetParser()
+		{
+			// add a dummy object for "null"
+			string emptyId = new UnityObjectKey(Guid.Empty, 0).ToString();
+			ObjectDatabase.AddObject(emptyId, new NullObject(emptyId));
+		}
+
 		/// <summary>
 		/// Parses the specified file.
 		/// </summary>

@@ -15,6 +15,14 @@ namespace ProjectBrowser
 		/// The unique identifier for this object.
 		/// </summary>
 		public readonly string UniqueId;
+
+		/// <summary>
+		/// Returns true if this object should not appear in the hierarchy view.
+		/// </summary>
+		public virtual bool HideFromHierarchy
+		{
+			get { return false; }
+		}
 		
 		public ProjectObject(string uniqueId)
 		{

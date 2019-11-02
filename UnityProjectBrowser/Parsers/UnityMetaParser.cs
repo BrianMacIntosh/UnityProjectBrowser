@@ -9,6 +9,13 @@ namespace ProjectBrowser
 {
 	public class UnityMetaParser : BaseParser
 	{
+		static UnityMetaParser()
+		{
+			// add a dummy object for "null"
+			string emptyGuid = Guid.Empty.ToString();
+			ObjectDatabase.AddObject(emptyGuid, new NullObject(emptyGuid));
+		}
+
 		/// <summary>
 		/// Parses the specified file.
 		/// </summary>
