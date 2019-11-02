@@ -68,27 +68,20 @@ namespace ProjectBrowser
 							}
 							break;
 						}
+				}
+			}
 
-					default:
-						{
-							// look through arbitrary data for object or asset references
-							if (valueMapping != null)
-							{
-								foreach (YamlNode node in valueMapping.AllNodes)
-								{
-									YamlMappingNode mappingNode = node as YamlMappingNode;
-									if (mappingNode != null)
-									{
-										UnityObjectKey reference = ParseReference(mappingNode, key);
-										if (!reference.IsEmpty)
-										{
-											AddRelationship(reference, "has-reference-to", "is-referenced-by");
-										}
-									}
-								}
-							}
-							break;
-						}
+			// search the entire tree for references
+			foreach (YamlNode node in objectNode.AllNodes)
+			{
+				YamlMappingNode mappingNode = node as YamlMappingNode;
+				if (mappingNode != null)
+				{
+					UnityObjectKey reference = ParseReference(mappingNode, key);
+					if (!reference.IsEmpty)
+					{
+						AddRelationship(reference, "has-reference-to", "is-referenced-by");
+					}
 				}
 			}
 		}
