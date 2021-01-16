@@ -49,6 +49,12 @@ namespace ProjectBrowser
 				foreach (YamlDocument document in stream.Documents)
 				{
 					YamlMappingNode documentNode = (YamlMappingNode)document.RootNode;
+					if (documentNode.Anchor == null)
+					{
+						// might be a JSON file (XRSettings.asset), skip for now
+						continue;
+					}
+
 					long fileId = long.Parse(documentNode.Anchor);
 					UnityObjectKey key = new UnityObjectKey(guid, fileId);
 					KeyValuePair<YamlNode, YamlNode> rootNode = documentNode.Children.First();
