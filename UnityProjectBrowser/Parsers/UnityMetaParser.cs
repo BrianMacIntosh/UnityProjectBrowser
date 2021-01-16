@@ -55,6 +55,15 @@ namespace ProjectBrowser
 					YamlScalarNode folderAssetScalarNode = (YamlScalarNode)folderAssetNode;
 					isFolderAsset = folderAssetScalarNode.Value == "yes";
 				}
+				else
+				{
+					// seems folder assets may randomly not have a folderAsset value
+					// try to identify them by the absence of other data
+					if (rootNode.Children.Count == 2 && Directory.Exists(UnityFolder.GetFolderPathForMeta(absolutePath)))
+					{
+						isFolderAsset = true;
+					}
+				}
 
 				if (isFolderAsset)
 				{

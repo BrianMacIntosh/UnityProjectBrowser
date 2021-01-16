@@ -16,8 +16,16 @@ namespace ProjectBrowser
 			get
 			{
 				string filePath = GetFilePath();
-				return Path.Combine(Path.GetDirectoryName(filePath), Path.GetFileNameWithoutExtension(filePath));
+				return GetFolderPathForMeta(filePath);
 			}
+		}
+
+		/// <summary>
+		/// Returns the directory path for the specified folder meta.
+		/// </summary>
+		public static string GetFolderPathForMeta(string folderMeta)
+		{
+			return Path.Combine(Path.GetDirectoryName(folderMeta), Path.GetFileNameWithoutExtension(folderMeta));
 		}
 
 		/// <summary>
