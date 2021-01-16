@@ -82,6 +82,11 @@
     <Compile Include="Project\ParserFeeder.cs" />
     <Compile Include="Project\ParserPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Structure\NullObject.cs" />
     <Compile Include="Structure\ObjectRelationship.cs" />
     <Compile Include="Structure\ProjectFile.cs" />
@@ -107,14 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,12 +142,13 @@
     <None Include="Assets\UnityIcons\ScriptableObject Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\AppIcons\FlatView.png" />
+    <Content Include="Assets\UiIcons\Error_red_16x16.png" />
+    <Content Include="Assets\UiIcons\FlatView.png" />
     <Content Include="Assets\AppIcons\ico16.png" />
     <Content Include="Assets\AppIcons\ico32.png" />
     <Content Include="Assets\AppIcons\ico48.png" />
     <Content Include="Assets\AppIcons\icon.ico" />
-    <Content Include="Assets\AppIcons\TreeView_713.png" />
+    <Content Include="Assets\UiIcons\TreeView_713.png" />
     <Content Include="Assets\UiIcons\arrow_back_16xLG.png" />
     <Content Include="Assets\UiIcons\arrow_Forward_16xLG.png" />
     <Content Include="Assets\UiIcons\case_sensitive.png" />

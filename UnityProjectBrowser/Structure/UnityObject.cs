@@ -25,16 +25,28 @@ namespace ProjectBrowser
 
 			if (yaml != null)
 			{
-				YamlMappingNode rootNode = (YamlMappingNode)yaml.RootNode;
-
-				// create prefab link
-				YamlNode prefabNode;
-				if (rootNode.Children.TryGetValue("m_PrefabParentObject", out prefabNode))
+				try
 				{
-					YamlMappingNode prefabMappingNode = (YamlMappingNode)prefabNode;
-					UnityObjectKey reference = ParseReference(prefabMappingNode, key);
-					AddRelationship(reference, "is-instance-of-prefab", "has-instance");
+					Parse(yaml, key);
 				}
+				catch (Exception e)
+				{
+					ParseError = e;
+				}
+			}
+		}
+
+		protected virtual void Parse(YamlDocument yaml, UnityObjectKey key)
+		{
+			YamlMappingNode rootNode = (YamlMappingNode)yaml.RootNode;
+
+			// create prefab link
+			YamlNode prefabNode;
+			if (rootNode.Children.TryGetValue("m_PrefabParentObject", out prefabNode))
+			{
+				YamlMappingNode prefabMappingNode = (YamlMappingNode)prefabNode;
+				UnityObjectKey reference = ParseReference(prefabMappingNode, key);
+				AddRelationship(reference, "is-instance-of-prefab", "has-instance");
 			}
 		}
 

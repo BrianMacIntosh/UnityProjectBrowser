@@ -13,11 +13,14 @@ namespace ProjectBrowser
 		/// <summary>
 		/// The type name of this object.
 		/// </summary>
-		public readonly string TypeName;
+		public string TypeName
+		{
+			get; private set;
+		}
 
-		private readonly UnityObjectKey m_scriptKey;
+		private UnityObjectKey m_scriptKey;
 
-		private readonly UnityObjectKey m_gameObjectKey;
+		private UnityObjectKey m_gameObjectKey;
 
 		/// <summary>
 		/// Reads a <see cref="UnityComponent"/> from the specified Yaml node.
@@ -25,6 +28,13 @@ namespace ProjectBrowser
 		public UnityComponent(string documentId, YamlDocument yaml, UnityObjectKey key)
 			: base(documentId, yaml, key)
 		{
+			
+		}
+
+		protected override void Parse(YamlDocument yaml, UnityObjectKey key)
+		{
+			base.Parse(yaml, key);
+
 			YamlMappingNode rootNode = (YamlMappingNode)yaml.RootNode;
 			KeyValuePair<YamlNode, YamlNode> firstNode = rootNode.Children.First();
 			YamlMappingNode objectNode = (YamlMappingNode)firstNode.Value;

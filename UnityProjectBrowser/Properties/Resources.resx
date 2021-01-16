@@ -388,22 +388,25 @@
   <data name="Close_16xLG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\uiicons\close_16xlg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FlatView" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\appicons\flatview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FolderOpen_16x16_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\uiicons\folderopen_16x16_72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Open_6529" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\uiicons\open_6529.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TreeView_713" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\appicons\treeview_713.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DialogGroup_5846_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\uiicons\dialoggroup_5846_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Find_VS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\uiicons\find_vs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_red_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\error_red_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlatView1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\flatview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TreeView_7131" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\uiicons\treeview_713.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

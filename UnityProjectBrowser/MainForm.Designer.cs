@@ -46,6 +46,7 @@
 			this.filterCaseSensitiveCheckBox = new System.Windows.Forms.CheckBox();
 			this.filterTextBox = new System.Windows.Forms.TextBox();
 			this.allObjectsTreeView = new System.Windows.Forms.TreeView();
+			this.viewErrorButton = new System.Windows.Forms.Button();
 			this.relationshipsIncludeChildrenCheckbox = new System.Windows.Forms.CheckBox();
 			this.projectObjectTypeTextBox = new System.Windows.Forms.TextBox();
 			this.selectedObjectFilePathTextBox = new System.Windows.Forms.TextBox();
@@ -73,6 +74,7 @@
 			this.allObjectsContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.openInExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.copyPathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.reparseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.relationshipsContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.showInAllObjectsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,7 +131,7 @@
 			// 
 			this.allObjectsFlatViewRadioButton.Appearance = System.Windows.Forms.Appearance.Button;
 			this.allObjectsFlatViewRadioButton.AutoSize = true;
-			this.allObjectsFlatViewRadioButton.Image = global::UnityProjectBrowser.Properties.Resources.FlatView;
+			this.allObjectsFlatViewRadioButton.Image = global::UnityProjectBrowser.Properties.Resources.FlatView1;
 			this.allObjectsFlatViewRadioButton.Location = new System.Drawing.Point(28, 0);
 			this.allObjectsFlatViewRadioButton.Name = "allObjectsFlatViewRadioButton";
 			this.allObjectsFlatViewRadioButton.Size = new System.Drawing.Size(22, 22);
@@ -142,7 +144,7 @@
 			// 
 			this.allObjectsTreeViewRadioButton.Appearance = System.Windows.Forms.Appearance.Button;
 			this.allObjectsTreeViewRadioButton.AutoSize = true;
-			this.allObjectsTreeViewRadioButton.Image = global::UnityProjectBrowser.Properties.Resources.TreeView_713;
+			this.allObjectsTreeViewRadioButton.Image = global::UnityProjectBrowser.Properties.Resources.TreeView_7131;
 			this.allObjectsTreeViewRadioButton.Location = new System.Drawing.Point(0, 0);
 			this.allObjectsTreeViewRadioButton.Name = "allObjectsTreeViewRadioButton";
 			this.allObjectsTreeViewRadioButton.Size = new System.Drawing.Size(22, 22);
@@ -178,10 +180,9 @@
 			this.filterCaseSensitiveCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.filterCaseSensitiveCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
 			this.filterCaseSensitiveCheckBox.AutoSize = true;
-			this.filterCaseSensitiveCheckBox.Image = global::UnityProjectBrowser.Properties.Resources.case_sensitive;
-			this.filterCaseSensitiveCheckBox.Location = new System.Drawing.Point(239, 0);
+			this.filterCaseSensitiveCheckBox.Location = new System.Drawing.Point(255, 0);
 			this.filterCaseSensitiveCheckBox.Name = "filterCaseSensitiveCheckBox";
-			this.filterCaseSensitiveCheckBox.Size = new System.Drawing.Size(22, 22);
+			this.filterCaseSensitiveCheckBox.Size = new System.Drawing.Size(6, 6);
 			this.filterCaseSensitiveCheckBox.TabIndex = 8;
 			this.toolTip.SetToolTip(this.filterCaseSensitiveCheckBox, "Case Sensitive");
 			this.filterCaseSensitiveCheckBox.UseVisualStyleBackColor = true;
@@ -218,6 +219,7 @@
 			objectInspectorBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			objectInspectorBox.Controls.Add(this.viewErrorButton);
 			objectInspectorBox.Controls.Add(this.relationshipsIncludeChildrenCheckbox);
 			objectInspectorBox.Controls.Add(projectObjectTypeLabel);
 			objectInspectorBox.Controls.Add(this.projectObjectTypeTextBox);
@@ -236,13 +238,23 @@
 			objectInspectorBox.TabStop = false;
 			objectInspectorBox.Text = "Selected Object";
 			// 
+			// viewErrorButton
+			// 
+			this.viewErrorButton.Image = global::UnityProjectBrowser.Properties.Resources.Error_red_16x16;
+			this.viewErrorButton.Location = new System.Drawing.Point(521, 99);
+			this.viewErrorButton.Name = "viewErrorButton";
+			this.viewErrorButton.Size = new System.Drawing.Size(22, 22);
+			this.viewErrorButton.TabIndex = 11;
+			this.viewErrorButton.UseVisualStyleBackColor = true;
+			this.viewErrorButton.Visible = false;
+			// 
 			// relationshipsIncludeChildrenCheckbox
 			// 
 			this.relationshipsIncludeChildrenCheckbox.Appearance = System.Windows.Forms.Appearance.Button;
 			this.relationshipsIncludeChildrenCheckbox.AutoSize = true;
 			this.relationshipsIncludeChildrenCheckbox.Checked = true;
 			this.relationshipsIncludeChildrenCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.relationshipsIncludeChildrenCheckbox.Image = global::UnityProjectBrowser.Properties.Resources.DialogGroup_5846_16x;
+			this.relationshipsIncludeChildrenCheckbox.Image = global::UnityProjectBrowser.Properties.Resources.TreeView_7131;
 			this.relationshipsIncludeChildrenCheckbox.Location = new System.Drawing.Point(87, 99);
 			this.relationshipsIncludeChildrenCheckbox.Name = "relationshipsIncludeChildrenCheckbox";
 			this.relationshipsIncludeChildrenCheckbox.Size = new System.Drawing.Size(22, 22);
@@ -409,7 +421,6 @@
 			// 
 			// openFolderToolStripMenuItem
 			// 
-			this.openFolderToolStripMenuItem.Image = global::UnityProjectBrowser.Properties.Resources.Open_6529;
 			this.openFolderToolStripMenuItem.Name = "openFolderToolStripMenuItem";
 			this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
 			this.openFolderToolStripMenuItem.Text = "Open Folder";
@@ -423,7 +434,6 @@
 			// 
 			// exitToolStripMenuItem
 			// 
-			this.exitToolStripMenuItem.Image = global::UnityProjectBrowser.Properties.Resources.Close_16xLG;
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
 			this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
 			this.exitToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
@@ -441,9 +451,8 @@
 			// goToToolStripMenuItem
 			// 
 			this.goToToolStripMenuItem.Enabled = false;
-			this.goToToolStripMenuItem.Image = global::UnityProjectBrowser.Properties.Resources.Find_VS;
 			this.goToToolStripMenuItem.Name = "goToToolStripMenuItem";
-			this.goToToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.goToToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
 			this.goToToolStripMenuItem.Text = "Go To";
 			this.goToToolStripMenuItem.Click += new System.EventHandler(this.goToToolStripMenuItem_Click);
 			// 
@@ -496,7 +505,6 @@
 			// toolStripBackButton
 			// 
 			this.toolStripBackButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripBackButton.Image = global::UnityProjectBrowser.Properties.Resources.arrow_back_16xLG;
 			this.toolStripBackButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripBackButton.Name = "toolStripBackButton";
 			this.toolStripBackButton.Size = new System.Drawing.Size(23, 22);
@@ -506,7 +514,6 @@
 			// toolStripForwardButton
 			// 
 			this.toolStripForwardButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripForwardButton.Image = global::UnityProjectBrowser.Properties.Resources.arrow_Forward_16xLG;
 			this.toolStripForwardButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripForwardButton.Name = "toolStripForwardButton";
 			this.toolStripForwardButton.Size = new System.Drawing.Size(23, 22);
@@ -518,30 +525,37 @@
 			this.allObjectsContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openInExplorerToolStripMenuItem,
             this.editToolStripMenuItem,
+            this.copyPathToolStripMenuItem,
             this.reparseToolStripMenuItem});
 			this.allObjectsContextMenu.Name = "allObjectsContextMenu";
-			this.allObjectsContextMenu.Size = new System.Drawing.Size(181, 92);
+			this.allObjectsContextMenu.Size = new System.Drawing.Size(163, 92);
 			// 
 			// openInExplorerToolStripMenuItem
 			// 
-			this.openInExplorerToolStripMenuItem.Image = global::UnityProjectBrowser.Properties.Resources.FolderOpen_16x16_72;
 			this.openInExplorerToolStripMenuItem.Name = "openInExplorerToolStripMenuItem";
-			this.openInExplorerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.openInExplorerToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
 			this.openInExplorerToolStripMenuItem.Text = "Open in Explorer";
 			this.openInExplorerToolStripMenuItem.Click += new System.EventHandler(this.openInExplorerToolStripMenuItem_Click);
 			// 
 			// editToolStripMenuItem
 			// 
 			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-			this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.editToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
 			this.editToolStripMenuItem.Text = "Edit";
 			this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+			// 
+			// copyPathToolStripMenuItem
+			// 
+			this.copyPathToolStripMenuItem.Name = "copyPathToolStripMenuItem";
+			this.copyPathToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+			this.copyPathToolStripMenuItem.Text = "Copy Path";
+			this.copyPathToolStripMenuItem.Click += new System.EventHandler(this.copyPathToolStripMenuItem_Click);
 			// 
 			// reparseToolStripMenuItem
 			// 
 			this.reparseToolStripMenuItem.Enabled = false;
 			this.reparseToolStripMenuItem.Name = "reparseToolStripMenuItem";
-			this.reparseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.reparseToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
 			this.reparseToolStripMenuItem.Text = "Reparse";
 			this.reparseToolStripMenuItem.Click += new System.EventHandler(this.reparseToolStripMenuItem_Click);
 			// 
@@ -550,13 +564,13 @@
 			this.relationshipsContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showInAllObjectsViewToolStripMenuItem});
 			this.relationshipsContextMenu.Name = "relationshipsContextMenu";
-			this.relationshipsContextMenu.Size = new System.Drawing.Size(205, 26);
+			this.relationshipsContextMenu.Size = new System.Drawing.Size(119, 26);
 			// 
 			// showInAllObjectsViewToolStripMenuItem
 			// 
 			this.showInAllObjectsViewToolStripMenuItem.Name = "showInAllObjectsViewToolStripMenuItem";
-			this.showInAllObjectsViewToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-			this.showInAllObjectsViewToolStripMenuItem.Text = "Show in All Objects View";
+			this.showInAllObjectsViewToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.showInAllObjectsViewToolStripMenuItem.Text = "Jump To";
 			this.showInAllObjectsViewToolStripMenuItem.Click += new System.EventHandler(this.showInAllObjectsViewToolStripMenuItem_Click);
 			// 
 			// MainForm
@@ -635,6 +649,8 @@
 		private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem goToToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem reparseToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem copyPathToolStripMenuItem;
+		private System.Windows.Forms.Button viewErrorButton;
 	}
 }
 

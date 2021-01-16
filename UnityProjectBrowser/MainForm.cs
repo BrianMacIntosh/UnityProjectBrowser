@@ -378,6 +378,15 @@ namespace UnityProjectBrowser
 				selectedObjectFileIdTextBox.Text = unityObjectKey.FileId.ToString();
 				selectedObjectFilePathTextBox.Text = selectedObject.GetFilePath();
 				projectObjectTypeTextBox.Text = selectedObject.GetType().Name;
+				if (selectedObject.ParseError != null)
+				{
+					viewErrorButton.Visible = true;
+					toolTip.SetToolTip(viewErrorButton, selectedObject.ParseError.ToString());
+				}
+				else
+				{
+					viewErrorButton.Visible = false;
+				}
 			}
 			else
 			{
@@ -564,7 +573,7 @@ namespace UnityProjectBrowser
 		}
 
 		/// <summary>
-		/// Opens the selected ojbect in the allObjects view in the default editor.
+		/// Opens the selected object in the allObjects view in the default editor.
 		/// </summary>
 		private void editToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -575,8 +584,33 @@ namespace UnityProjectBrowser
 				string objectPath = projectObject.GetFilePath();
 				if (!string.IsNullOrEmpty(objectPath))
 				{
-					Process.Start(objectPath);
+					try
+					{
+						Process.Start(objectPath);
+					}
+					catch (System.ComponentModel.Win32Exception except)
+					{
+						MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK);
+					}
 				}
+			}
+		}
+
+		/// <summary>
+		/// Copies the full path of the selected object in the allObjects view to the clipboard.
+		/// </summary>
+		private void copyPathToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ProjectObject projectObject;
+			if (allObjectsTreeView.SelectedNode != null
+				&& ObjectDatabase.TryGetObject(allObjectsTreeView.SelectedNode.Name, out projectObject))
+			{
+				string objectPath = projectObject.GetFilePath();
+				Clipboard.SetText(objectPath);
+			}
+			else
+			{
+				Clipboard.SetText(allObjectsTreeView.SelectedNode.Name);
 			}
 		}
 

@@ -1,6 +1,7 @@
 ﻿// Copyright(c) 2018 Brian MacIntosh
 // MIT License
 
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -23,6 +24,11 @@ namespace ProjectBrowser
 		{
 			get { return false; }
 		}
+
+		/// <summary>
+		/// If there was an error while parsing the object, the error.
+		/// </summary>
+		public Exception ParseError;
 		
 		public ProjectObject(string uniqueId)
 		{

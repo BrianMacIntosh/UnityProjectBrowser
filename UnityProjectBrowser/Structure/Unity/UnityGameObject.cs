@@ -11,7 +11,10 @@ namespace ProjectBrowser
 		/// <summary>
 		/// The name of the <see cref="UnityGameObject"/>.
 		/// </summary>
-		public readonly string Name;
+		public string Name
+		{
+			get; private set;
+		}
 
 		/// <summary>
 		/// Reads a <see cref="UnityGameObject"/> from the specified Yaml node.
@@ -19,6 +22,13 @@ namespace ProjectBrowser
 		public UnityGameObject(string documentId, YamlDocument yaml, UnityObjectKey key)
 			: base(documentId, yaml, key)
 		{
+			
+		}
+
+		protected override void Parse(YamlDocument yaml, UnityObjectKey key)
+		{
+			base.Parse(yaml, key);
+
 			YamlMappingNode rootNode = (YamlMappingNode)yaml.RootNode;
 			YamlMappingNode objectNode = (YamlMappingNode)rootNode.Children.First().Value;
 

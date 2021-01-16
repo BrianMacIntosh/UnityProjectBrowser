@@ -403,6 +403,16 @@ namespace UnityProjectBrowser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Error_red_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Error_red_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Find_VS {
             get {
                 object obj = ResourceManager.GetObject("Find_VS", resourceCulture);
@@ -453,9 +463,9 @@ namespace UnityProjectBrowser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FlatView {
+        internal static System.Drawing.Bitmap FlatView1 {
             get {
-                object obj = ResourceManager.GetObject("FlatView", resourceCulture);
+                object obj = ResourceManager.GetObject("FlatView1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -973,9 +983,9 @@ namespace UnityProjectBrowser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TreeView_713 {
+        internal static System.Drawing.Bitmap TreeView_7131 {
             get {
-                object obj = ResourceManager.GetObject("TreeView_713", resourceCulture);
+                object obj = ResourceManager.GetObject("TreeView_7131", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
