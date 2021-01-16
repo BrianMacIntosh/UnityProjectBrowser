@@ -51,6 +51,12 @@ namespace ProjectBrowser
 			{
 				return -1;
 			}
+			else if (m_currentCharacter == m_currentLine.Length)
+			{
+				// edge case: just read a new empty line
+				m_currentCharacter++;
+				return '\n';
+			}
 			else
 			{
 				return m_currentLine[m_currentCharacter++];
